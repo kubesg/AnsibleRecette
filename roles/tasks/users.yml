@@ -1,0 +1,19 @@
+- name: "creation de groupe"
+  groupe:
+        name: "itescia"
+        state: present
+
+- name: "creation d'un utilisateur"
+  user:
+        name: "itesciaadmin"
+        password: '!'
+        groups: sudo, itescia
+        createhome: yes
+        home: /home/itesciaadmin
+
+- name: "SSH autorise"
+  authorized_key:
+                  user: "itesciaadmin"
+                  state: present
+                  key:'AAAAB3NzaC1yc2EAAAADAQABAAABAQClBbZdy6JydSi+WXZgqcd+nB7Z5Yx2P2RxCbNPkfucpWwYSjRmBgSbS1cYlPQx20oaNbupLSnxdi69AZYGtZQwhbBoJ/86CWTOGURcsmFRIv226HqZoFqa02KxH5Az0Vy8zsgfz0EOilNLtcG60tdhZVhNIDHKe3htrZQ+NqWImZIMZOmQOf1qcct0izo4Pj5patKpj+RblKYAbcePCbYXF7ijPIj2mtSYbeQCC3fh+/5dbNz44dqDlwyBTrCICmRr+qqt0le5Z9EmxqZ7tNSaT1Vj3vhgf5fZFb5GwnGNxEft1H/c5eKsM4HUlriG3quj6ETIdnwhFpYf7ocjaZZN'
+                  
