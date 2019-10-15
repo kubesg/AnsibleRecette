@@ -4,7 +4,4 @@
     - vars/main.yml
   roles:
     - { role: geerlingguy.mysql }
-    - role: ome.mysql_backup
-      mysql_backup_dir: /backup/mysql
-      mysql_backup_filename_format: "database-%Y%m%d.mysqldump"
-      mysql_backup_frequency: hourly
+    - { role: ome.mysql_backup  }
