@@ -1,6 +1,6 @@
 ---
 - hosts: webservers
-  vars-files: 
+  vars_files: 
     - vars/main.yml
   roles:
     - { role: geerlingguy.mysql }
