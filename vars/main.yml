@@ -8,4 +8,4 @@ mysql_users:
     - name: itescia
       host: "%"
       password: itescia
-      priv: "database_webserver:ALL"
+      priv: "database_webserver.*:ALL"
