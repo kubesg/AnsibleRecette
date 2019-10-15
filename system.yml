@@ -1,5 +1,5 @@
-hosts: all
-become: yes
-become_user: itescia
-roles:
+- hosts: all
+  become: yes
+  become_user: itescia
+  roles:
         - "roles/tasks"

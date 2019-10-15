@@ -1,4 +1,4 @@
-name : install package
-apt: 
+- name : install package
+  apt: 
     name: htop
     state: present
