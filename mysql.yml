@@ -1,0 +1,6 @@
+---
+- hosts: webservers
+  vars-files: 
+    - vars/main.yml
+  roles:
+    - { role: geerlingguy.mysql }

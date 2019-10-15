@@ -1,0 +1,10 @@
+mysql_root_password: itescia
+mysql_databases:
+  - name: database_itescia
+    encoding: latin1
+    collation: latin1_general_ci
+
+mysql_users:
+    - name: itescia
+      host: "%"
+      password: itescia
