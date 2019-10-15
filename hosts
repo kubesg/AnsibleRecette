@@ -3,3 +3,4 @@ srv-web01
 srv-web02
 [webservers:vars]
 ansible_user= root
+ansible_python_interpreter=/usr/bin/python2.7
