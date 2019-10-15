@@ -1,3 +1,5 @@
 [webservers]
 srv-web01
 srv-web02
+[webservers:vars]
+ansible_user= root

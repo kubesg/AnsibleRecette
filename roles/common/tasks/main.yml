@@ -1,2 +1,3 @@
-- include : "package.yml"
-- include : "users.yml"
+---
+- include: "package.yml"
+- include: "users.yml"
