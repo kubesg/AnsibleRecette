@@ -13,8 +13,8 @@
 #        home: /home/itesciaadmin
 
 - name: Add users 
-        user: name={{ item.username }} createhome=yes password={{ item.password }}
-        with_items: '{{users}}'
+  user: name={{ item.username }} createhome=yes password={{ item.password }}
+  with_items: '{{users}}'
 
 - name: "SSH autorise"
   authorized_key:
