@@ -20,4 +20,4 @@ mysql_backup_db: "database_webserver"
 
 apache_listen_port: 80
 apache_vhosts:
-  - {servername: "srv-web01.local", documentroot: "/var/www/html/srv-web01.local"}
+  - {servername: "srv-web01.local", documentroot: "/var/www/vhosts/srv-web01.local"}
