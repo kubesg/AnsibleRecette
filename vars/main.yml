@@ -13,3 +13,4 @@ mysql_users:
 mysql_backup_dir: /backup/mysql
 mysql_backup_filename_format: "database-%Y%m%d.mysqldump"
 mysql_backup_frequency: hourly
+mysql_backup_db: "database_webserver"
