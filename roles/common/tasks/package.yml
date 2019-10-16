@@ -1,5 +1,11 @@
 ---
-- name : install package
-  apt: 
-    name: htop
+#- name : install package
+#  apt: 
+#    name: htop
+#    state: present
+
+- name : "install de package"
+  apt:
+    name: {{ item }}
     state: present
+    loop: {{ packages }}
