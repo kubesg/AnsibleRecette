@@ -12,6 +12,6 @@ users:
 
 group:
   - groupname: itesciadmin
-  - state: present
+  - groupstate: present
   - groupname: webadmin
-  - state: present
+  - groupstate: present
