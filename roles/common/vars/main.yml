@@ -9,3 +9,9 @@ users:
     password: '!'
   - username: itesciadmin2
     password: '!'
+
+group:
+  - groupname: itesciadmin
+  - state: present
+  - groupname: webadmin
+  - state: present

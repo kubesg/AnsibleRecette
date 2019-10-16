@@ -16,6 +16,10 @@
   user: name={{ item.username }} createhome=yes password={{ item.password }}
   with_items: '{{users}}'
 
+- name: Creation de groupes
+  group: name={{ item.groupname }} state={{ item.state }}
+  with_items: '{{group}}'
+  
 - name: "SSH autorise"
   authorized_key:
                   user: "itesciaadmin"
