@@ -1,3 +1,4 @@
 ---
 - src: geerlingguy.mysql
 #- src: ome.mysql_backup
+- src: geerlingguy.apache
