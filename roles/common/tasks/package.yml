@@ -6,6 +6,6 @@
 
 - name : "install de package"
   apt:
-    name: {{ item }}
+    name: "{{ item }}"
     state: present
-  loop: {{ packages }}
+  loop: "{{ packages }}"
