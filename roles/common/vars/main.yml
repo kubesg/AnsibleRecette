@@ -3,3 +3,9 @@ packages:
       - htop
       - vim
       - git
+
+users:
+  - username: itesciadmin
+    password: '!'
+  - username: itesciadmin2
+    password: '!'
