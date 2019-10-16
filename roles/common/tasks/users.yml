@@ -18,7 +18,7 @@
 
 - name: Creation de groupes
   group:  name={{ item.groupname }} state=present
-  with_items: '{{groups}}'
+  with_items: '{{group}}'
 
 - name: "SSH autorise"
   authorized_key:
