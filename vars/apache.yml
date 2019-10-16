@@ -1,0 +1,7 @@
+---
+- hosts: srv-web01
+  vars_files: 
+    - vars/main.yml
+  
+  roles:    
+    - { role: geerlingguy.apache }

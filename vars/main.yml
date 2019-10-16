@@ -1,3 +1,4 @@
+#MySQL varaibles
 mysql_root_password: itescia
 mysql_databases:
   - name: database_webserver
@@ -14,3 +15,9 @@ mysql_backup_dir: /backup/mysql
 mysql_backup_filename_format: "database-%Y%m%d.mysqldump"
 mysql_backup_frequency: hourly
 mysql_backup_db: "database_webserver"
+
+#Apache configuration
+
+apache_listen_port: 80
+apache_vhosts:
+  - {servername: "srv-web01.local", documentroot: "/var/www/html/srv-web01.local"}
