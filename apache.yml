@@ -8,18 +8,18 @@
     - name: create documentroot on servers
       hosts={{ item.hostname }}
     
-      set_fact:
-            file: "{{ apache_vhosts | default([])+ [{'path': item.documentroot}]}}"
+#      set_fact:
+#            file: "{{ apache_vhosts | default([])+ [{'path': item.documentroot}]}}"
 #    - name: create vhost files
 #      set_facts:
 #            apache_vhosts: "{{ apache_vhosts | default([])+ [{'servername:': item.url, 'documentroot': item.documentroot}]}}"
 #
-      with_items: "{{ customers_apache_vhosts }}"
+#      with_items: "{{ customers_apache_vhosts }}"
        tags: debug
      - name: Debug apache_vhosts user variable
        debug:
            msg:
-           - "{{ apache_vhosts }}"
+           - "{{ item.hostname }}"
        tags: debug
 
 
