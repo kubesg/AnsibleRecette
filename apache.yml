@@ -5,7 +5,6 @@
     - vars/apache_customers_settings.yml
   
   pre_tasks:
-<<<<<<< HEAD
     - hosts={{ item.hostname }}
     - name: create documentroot on servers
     set_fact:
@@ -24,11 +23,3 @@
 
   roles:    
     - { role: geerlingguy.apache }}
-=======
-    - name: creation du documentroot
-      file: path="{{ item.documentroot }}" state=directory
-      with_items: '{{apache_vhosts}}'
-
-  roles:    
-    - { role: geerlingguy.apache }
->>>>>>> apache.yml change name
