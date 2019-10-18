@@ -1,13 +1,13 @@
 ---
 customers_apache_vhosts:
 		- hostname: srv-web01
-			url: srv-web01.local
-			documentroot: /var/www/html/srv-web01.local
+#			url: srv-web01.local
+#			documentroot: /var/www/html/srv-web01.local
+#
+#    - hostname: srv-web01
+#      url: toto.fr
+#      documentroot: /var/www/html/toto.fr
 
-    - hostname: srv-web01
-      url: toto.fr
-      documentroot: /var/www/html/toto.fr
-
-    - hostname: srv-web02
-      url: srv-web02.local
-      documentroot: /var/www/html/srv-web02.local
+#      - hostname: srv-web02
+#     url: srv-web02.local
+#    documentroot: /var/www/html/srv-web02.local
