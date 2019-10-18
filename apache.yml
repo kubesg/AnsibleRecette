@@ -10,10 +10,10 @@
     
       set_fact:
             file: "{{ apache_vhosts | default([])+ [{'path:': item.documentroot}]}}"
-    - name: create vhost files
-      set_facts:
-            apache_vhosts: "{{ apache_vhosts | default([])+ [{'servername:': item.url, 'documentroot': item.documentroot}]}}"
-
+#    - name: create vhost files
+#      set_facts:
+#            apache_vhosts: "{{ apache_vhosts | default([])+ [{'servername:': item.url, 'documentroot': item.documentroot}]}}"
+#
       with_items: "{{ customers_apache_vhosts }}"
   
 #  pre_tasks:
