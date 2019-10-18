@@ -15,6 +15,14 @@
 #            apache_vhosts: "{{ apache_vhosts | default([])+ [{'servername:': item.url, 'documentroot': item.documentroot}]}}"
 #
       with_items: "{{ customers_apache_vhosts }}"
+       tags: debug
+     - name: Debug apache_vhosts user variable
+       debug:
+           msg:
+           - "{{ apache_vhosts }}"
+       tags: debug
+
+
   
 #  pre_tasks:
 #    - nom: creation du documentroot
