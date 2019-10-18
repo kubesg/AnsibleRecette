@@ -9,7 +9,7 @@
       hosts={{ item.hostname }}
     
       set_fact:
-            file: "{{ apache_vhosts | default([])+ [{'path:': item.documentroot}]}}"
+            file: "{{ apache_vhosts | default([])+ [{'path': item.documentroot}]}}"
 #    - name: create vhost files
 #      set_facts:
 #            apache_vhosts: "{{ apache_vhosts | default([])+ [{'servername:': item.url, 'documentroot': item.documentroot}]}}"
