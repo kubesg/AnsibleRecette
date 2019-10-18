@@ -5,11 +5,12 @@
     - vars/apache_customers_settings.yml
   
   pre_tasks:
-    - hosts={{ item.hostname }}
-      name: create documentroot on servers
+    - name: create documentroot on servers
+      hosts={{ item.hostname }}
+    
       set_fact:
             file: "{{ apache_vhosts | default([])+ [{'path:': item.documentroot}]}}"
-      name: create vhost files
+    - name: create vhost files
       set_facts:
             apache_vhosts: "{{ apache_vhosts | default([])+ [{'servername:': item.url, 'documentroot': item.documentroot}]}}"
 
