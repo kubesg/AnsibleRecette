@@ -7,13 +7,13 @@
   pre_tasks:
     - hosts={{ item.hostname }}
     - name: create documentroot on servers
-    set_fact:
+      set_fact:
             file: "{{ apache_vhosts | default([])+ [{'path:': item.documentroot}]}}"
     - name: create vhost files
-    set_facts:
+      set_facts:
             apache_vhosts: "{{ apache_vhosts | default([])+ [{'servername:': item.url, 'documentroot': item.documentroot}]}}"
 
-    with_items: "{{ customers_apache_vhosts }}"
+      with_items: "{{ customers_apache_vhosts }}"
   
 #  pre_tasks:
 #    - nom: creation du documentroot
