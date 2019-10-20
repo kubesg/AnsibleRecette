@@ -17,8 +17,9 @@
 #      with_items: "{{ customers_apache_vhosts }}"
 
   pre_tasks:
-    - hosts: "{{ item.webhosts }}"
-    - nom: creation du documentroot
+#   - hosts: "{{ item.webhosts }}"
+    - name: creation du documentroot
+      hosts: "{{ item.webhosts }}"
       file: path="{{ item.documentroot }}" state=directory
       with_items: "{{customers_apache_vhosts}}"
 
