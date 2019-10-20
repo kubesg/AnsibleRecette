@@ -23,8 +23,8 @@
     - name: copy index.html to the documentroot folder
       copy:
         src:  templates/index.html
-        dest: /var/www/html/index.html
-      
+        dest="{{ item.documentroot }}"/index.html
+      with_items: "{{customers_apache_vhosts}}"
 
 
   roles:    
