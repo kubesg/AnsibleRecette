@@ -19,11 +19,12 @@
   pre_tasks:
     - name: creation du documentroot
       file: path="{{ item.documentroot }}" state=directory
+      with_items: "{{customers_apache_vhosts}}"
     - name: copy index.html to the documentroot folder
       copy:
         src:  templates/index.html
         dest: /var/www/html/index.html
-      with_items: "{{customers_apache_vhosts}}"
+      
 
 
   roles:    
