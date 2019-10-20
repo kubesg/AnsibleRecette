@@ -20,7 +20,7 @@
     - hosts: "{{ item.webhosts }}"
     - nom: creation du documentroot
       file: path="{{ item.documentroot }}" state=directory
-      with_items: '{{customers_apache_vhosts}}'
+      with_items: "{{customers_apache_vhosts}}"
 
 
   roles:    
