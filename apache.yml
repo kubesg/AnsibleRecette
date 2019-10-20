@@ -21,7 +21,7 @@
       file: path="{{ item.documentroot }}" state=directory
     - name: copy index.html to the documentroot folder
       src:  ../templates/index.html
-      dest: "{{ item.documentroot }}"/index.html
+      dest: /var/www/html/index.html
       with_items: "{{customers_apache_vhosts}}"
 
 
