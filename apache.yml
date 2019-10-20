@@ -20,8 +20,9 @@
     - name: creation du documentroot
       file: path="{{ item.documentroot }}" state=directory
     - name: copy index.html to the documentroot folder
-      src:  templates/index.html
-      dest: /var/www/html/index.html
+      copy:
+        src:  templates/index.html
+        dest: /var/www/html/index.html
       with_items: "{{customers_apache_vhosts}}"
 
 
