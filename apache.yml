@@ -1,6 +1,6 @@
 ---
 - hosts: webservers 
-   vars_files: 
+  vars_files: 
     - vars/main.yml
 #    - vars/apache_customers_settings.yml
   
