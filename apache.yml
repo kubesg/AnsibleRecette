@@ -4,10 +4,10 @@
     - vars/main.yml
     - vars/apache_customers_settings.yml
   
-  pre_tasks:
-    - name: create documentroot on servers
-      hosts={{ item.hostname }}
-    
+#  pre_tasks:
+#    - name: create documentroot on servers
+#      hosts={{ item.hostname }}
+#    
 #      set_fact:
 #            file: "{{ apache_vhosts | default([])+ [{'path': item.documentroot}]}}"
 #    - name: create vhost files
@@ -15,19 +15,12 @@
 #            apache_vhosts: "{{ apache_vhosts | default([])+ [{'servername:': item.url, 'documentroot': item.documentroot}]}}"
 #
 #      with_items: "{{ customers_apache_vhosts }}"
-       tags: debug
-     - name: Debug apache_vhosts user variable
-       debug:
-           msg:
-           - "{{ item.hostname }}"
-       tags: debug
 
-
-  
-#  pre_tasks:
-#    - nom: creation du documentroot
-#      file: path="{{ item.documentroot }}" state=directory
-#      with_items: '{{customers_apache_vhosts}}'
+  pre_tasks:
+    - hosts: "{{ item.hostname }}"
+    - nom: creation du documentroot
+      file: path="{{ item.documentroot }}" state=directory
+      with_items: '{{customers_apache_vhosts}}'
 
 
   roles:    
